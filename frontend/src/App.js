@@ -2,16 +2,27 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const App = () => {
-  const [data, setData] = useState({ res: [] });
+  const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const res = axios('http://localhost:3001/ramens');
-      setData(res);
+      const res = await axios.get('http://localhost:3001/ramens');
+      setData(res.data);
     }
     fetchData();
   }, []);
 
-  return <p>{data ? 'LOADING' : data.res}</p>;
+  return (
+    <>
+      {!data.length && 'LOADING'}
+      {!!data.length && (
+        <ul>
+          {data.map((d) => (
+            <li key={d.id}>{d.taste}</li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
 };
 
 export default App;
