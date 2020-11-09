@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Layout from './Layout';
+
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -12,7 +14,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Layout>
       {!data.length && 'LOADING'}
       {!!data.length && (
         <ul>
@@ -21,7 +23,7 @@ const App = () => {
           ))}
         </ul>
       )}
-    </>
+    </Layout>
   );
 };
 
