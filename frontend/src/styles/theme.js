@@ -3,8 +3,8 @@ const theme = {
     black: '#111',
     white: '#efefef',
     gray: '#d5dbe3',
-    main: '#8dbbf7',
-    sub: '#b4cef0',
+    main: '#de4507',
+    sub: '#ed9877',
   },
   container: {
     header: '980px',

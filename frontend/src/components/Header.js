@@ -18,16 +18,25 @@ const Container = styled.div`
   width: 100%;
   h1 {
     color: ${colorWhite};
-    font: 20px monospace;
+    font: 25px monospace;
     line-height: 80px;
     margin: 0 ${gapS};
+    img {
+      height: 30px;
+      line-height: 80px;
+      margin-inline-end: 20px;
+      width: 30px;
+    }
   }
 `;
 
 const Header = () => (
   <Wrap>
     <Container>
-      <h1>RAMEN</h1>
+      <h1>
+        <img src="ramen.svg" alt="logo" />
+        RAMEN
+      </h1>
     </Container>
   </Wrap>
 );

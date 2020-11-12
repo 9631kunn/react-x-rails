@@ -15,13 +15,17 @@ a{
 ul{
   padding-inline-start: 20px;
 }
+input[type="text"] {
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
 button{
   appearance: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-  padding: 0;
 }
 `;
 

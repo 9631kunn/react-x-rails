@@ -5,4 +5,9 @@ class RamensController < ApplicationController
     render json: @ramen
   end
 
+  def create
+    @ramen = Ramen.create(taste: params[:taste])
+    render json: @ramen
+  end
+
 end
