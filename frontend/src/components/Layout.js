@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../styles/global';
@@ -9,10 +10,12 @@ import theme from '../styles/theme';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Header />
-    <Main children={children} />
-    <Footer />
+    <BrowserRouter>
+      <GlobalStyle />
+      <Header />
+      <Main children={children} />
+      <Footer />
+    </BrowserRouter>
   </ThemeProvider>
 );
 

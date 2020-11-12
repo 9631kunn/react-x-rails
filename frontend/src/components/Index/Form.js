@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 
 const gapS = (props) => props.theme.gap.s;
 const gapM = (props) => props.theme.gap.m;
@@ -34,7 +33,7 @@ const Form = ({ taste, handleSubmit, handleChange }) => {
   return (
     <Wrap onSubmit={handleSubmit}>
       <input type="text" value={taste} onChange={handleChange} placeholder="新メニュー" />
-      <button type="submit">SUBMIT</button>
+      <button type="submit">考案</button>
     </Wrap>
   );
 };

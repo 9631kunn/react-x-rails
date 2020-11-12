@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const container = (props) => props.theme.container.header;
@@ -17,15 +18,17 @@ const Container = styled.div`
   max-width: ${container};
   width: 100%;
   h1 {
-    color: ${colorWhite};
-    font: 25px monospace;
-    line-height: 80px;
-    margin: 0 ${gapS};
-    img {
-      height: 30px;
+    a {
+      color: ${colorWhite};
+      font: 25px monospace;
       line-height: 80px;
-      margin-inline-end: 20px;
-      width: 30px;
+      margin: 0 ${gapS};
+      img {
+        height: 30px;
+        line-height: 80px;
+        margin-inline-end: 20px;
+        width: 30px;
+      }
     }
   }
 `;
@@ -34,8 +37,10 @@ const Header = () => (
   <Wrap>
     <Container>
       <h1>
-        <img src="ramen.svg" alt="logo" />
-        RAMEN
+        <Link to="/">
+          <img src="ramen.svg" alt="logo" />
+          RAMEN
+        </Link>
       </h1>
     </Container>
   </Wrap>
