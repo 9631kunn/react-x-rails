@@ -41,7 +41,7 @@ module Backend
         origins "localhost:3000"
         resource "*",
           headers: :any,
-          methods: [:get, :post]
+          methods: [:get, :post, :patch]
           # methods: [:get, :post, :options, :head]
       end
     end

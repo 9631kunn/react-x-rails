@@ -4,7 +4,7 @@ const theme = {
     white: '#efefef',
     gray: '#d5dbe3',
     main: '#de4507',
-    sub: '#ed9877',
+    sub: '#f5ad90',
   },
   container: {
     header: '980px',

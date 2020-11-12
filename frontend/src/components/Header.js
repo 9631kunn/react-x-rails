@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import ramen from '../images/ramen.svg';
+
 const container = (props) => props.theme.container.header;
 const colorMain = (props) => props.theme.color.main;
 const colorWhite = (props) => props.theme.color.white;
@@ -9,7 +11,7 @@ const gapS = (props) => props.theme.gap.s;
 
 const Wrap = styled.header`
   background: ${colorMain};
-  box-shadow: 0 1px 10px hsl(0 0% 0% / 20%);
+  box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.49);
   height: 80px;
 `;
 
@@ -38,7 +40,7 @@ const Header = () => (
     <Container>
       <h1>
         <Link to="/">
-          <img src="ramen.svg" alt="logo" />
+          <img src={ramen} alt="logo" />
           RAMEN
         </Link>
       </h1>

@@ -15,4 +15,10 @@ class RamensController < ApplicationController
     render json: @ramen
   end
 
+  def update
+    @ramen = Ramen.find(params[:id])
+    @ramen.update_attributes(taste: params[:taste])
+    render json: @ramen
+  end
+
 end
