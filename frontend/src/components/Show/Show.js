@@ -124,6 +124,12 @@ const Show = () => {
     setEditable(false); // 編集モード終了
   };
 
+  // データ削除用
+  const handleDelete = (e) => {
+    e.preventDefault();
+    axios.delete(`http://localhost:3001/ramens/${id}`);
+  };
+
   return (
     <Wrap>
       {data && (
@@ -144,9 +150,12 @@ const Show = () => {
           <button className="button button__edit" onClick={handleEditableChange}>
             {editable ? '編集をやめる' : '編集する'}
           </button>
-          <button className="button button__delete">削除する</button>
+          <button className="button button__delete" onClick={handleDelete}>
+            削除する
+          </button>
         </Grid>
       )}
+      {!data && <p>データがありません</p>}
     </Wrap>
   );
 };

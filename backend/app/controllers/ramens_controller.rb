@@ -21,4 +21,13 @@ class RamensController < ApplicationController
     render json: @ramen
   end
 
+  def destroy
+    @ramen = Ramen.find(params[:id])
+    if @ramen.destroy
+      head :no_content, status: :ok
+    else
+      render json: @ramen.errors, status: :unprocessable_entity
+    end
+  end
+
 end
